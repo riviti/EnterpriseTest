@@ -1,0 +1,52 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+        <ul>
+            <li>
+                Skriv in namn på orkestern:
+                <br/>
+                <g:TextBox ui:field="fullName"/>
+            </li>
+            <li>
+                Skriv in förkortningen på orkesternamnet:
+                <br/>
+                <g:TextBox ui:field="shortName"/>
+            </li>
+            <li>
+                <g:CheckBox ui:field="shortNameUsageAllowed">Förkortning får användas i schemat</g:CheckBox>
+            </li>
+            <li>
+                Hur många gånger har ni varit på SOF?
+                <br/>
+                <g:IntegerBox ui:field="sofVisitationCount"></g:IntegerBox>
+            </li>
+            <li>
+                Vad ser ni fram emot mest på SOF2013?
+                <br/>
+                <g:TextBox ui:field="lookingForwardToDescription"></g:TextBox>
+            </li>
+            <li>
+                Vilken typ av musik spelar ni helst?
+                <br/>
+                <g:TextBox ui:field="favouriteMusicDescription"></g:TextBox>
+            </li>
+            <li>
+                Vilket är ert bästa minne som orkester?
+                <br/>
+                <g:TextBox ui:field="bestOrchestraMemory"></g:TextBox>
+            </li>
+            <li>
+                Har ni någon ritual som utförs inför konserter?
+                <br/>
+                <g:TextBox ui:field="concertRitualDescription"></g:TextBox>
+            </li>
+            <li>
+                Beskriv orkestern med tre ord:
+                <br/>
+                <g:TextBox ui:field="threeDescriptiveWords"></g:TextBox>
+            </li>
+        </ul>
+    </g:HTMLPanel>
+
+</ui:UiBinder>

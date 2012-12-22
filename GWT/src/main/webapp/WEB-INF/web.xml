@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <servlet>
+        <servlet-name>org.riviti.org.EnterpriseTest.GWT.GWT GWTService</servlet-name>
+        <servlet-class>org.riviti.org.EnterpriseTest.GWT.server.GWTServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>org.riviti.org.EnterpriseTest.GWT.GWT GWTService</servlet-name>
+        <url-pattern>/GWT/GWTService</url-pattern>
+    </servlet-mapping>
+</web-app>
