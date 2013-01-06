@@ -19,7 +19,7 @@ public class RegistrationModule implements EntryPoint {
     }
 
     // Create the Driver
-    Driver driver = GWT.create(Driver.class);
+    final Driver driver = GWT.create(Driver.class);
 
     /**
      * This is the entry point method.

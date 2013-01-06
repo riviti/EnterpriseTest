@@ -12,17 +12,21 @@ import java.util.List;
 @Stateless
 public class OrchestraRegistrationHandlerBean implements OrchestraRegistrationHandler {
 
-    @PersistenceContext(unitName = "PersistenceUnit")
-    private EntityManager em;
+    private EntityManager entityManager;
 
     @Override
     public List<OrchestraRegistration> getMessages() {
-        TypedQuery<OrchestraRegistration> query = em.createQuery("select m from OrchestraRegistration m", OrchestraRegistration.class);
+        TypedQuery<OrchestraRegistration> query = entityManager.createQuery("select m from OrchestraRegistration m", OrchestraRegistration.class);
         return query.getResultList();
     }
 
     @Override
     public void createRegistration(OrchestraRegistration registration) {
-        em.merge(registration);
+        entityManager.merge(registration);
+    }
+
+    @PersistenceContext(unitName = "PersistenceUnit")
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 }

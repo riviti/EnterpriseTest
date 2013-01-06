@@ -13,7 +13,7 @@ import java.util.List;
 public class GWTServiceImpl extends RemoteServiceServlet implements GWTService {
 
     private static final long serialVersionUID = -4154185365272929994L;
-    private OrchestraRegistrationHandler orchestraRegistrationHandler;
+    private transient OrchestraRegistrationHandler orchestraRegistrationHandler;
 
     @EJB
     public void setOrchestraRegistrationHandler(OrchestraRegistrationHandler orchestraRegistrationHandler) {
