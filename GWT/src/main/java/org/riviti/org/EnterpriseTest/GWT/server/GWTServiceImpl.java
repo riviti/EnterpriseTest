@@ -5,12 +5,15 @@ import org.riviti.EnterpriseTest.Common.OrchestraRegistration;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistrationHandler;
 import org.riviti.org.EnterpriseTest.GWT.client.GWTService;
 import org.riviti.org.EnterpriseTest.GWT.client.OrchestraRegistrationDTO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ejb.EJB;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GWTServiceImpl extends RemoteServiceServlet implements GWTService {
+    private static final Logger logger = LoggerFactory.getLogger(GWTServiceImpl.class);
 
     private static final long serialVersionUID = -4154185365272929994L;
     private transient OrchestraRegistrationHandler orchestraRegistrationHandler;
@@ -43,6 +46,9 @@ public class GWTServiceImpl extends RemoteServiceServlet implements GWTService {
 
     @Override
     public void saveRegistration(OrchestraRegistrationDTO dto) {
+
+        logger.info("Adding registration {}", dto);
+
         OrchestraRegistration registration = new OrchestraRegistration();
         registration.setId(dto.getId());
         registration.setFullName(dto.getFullName());

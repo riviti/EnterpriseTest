@@ -2,6 +2,8 @@ package org.riviti.EnterpriseTest.Backend;
 
 import org.riviti.EnterpriseTest.Common.OrchestraRegistration;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistrationHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -11,6 +13,8 @@ import java.util.List;
 
 @Stateless
 public class OrchestraRegistrationHandlerBean implements OrchestraRegistrationHandler {
+
+    private static final Logger logger = LoggerFactory.getLogger(OrchestraRegistrationHandlerBean.class);
 
     private EntityManager entityManager;
 
@@ -22,6 +26,7 @@ public class OrchestraRegistrationHandlerBean implements OrchestraRegistrationHa
 
     @Override
     public void createRegistration(OrchestraRegistration registration) {
+        logger.debug("Creating registration: {}", registration);
         entityManager.merge(registration);
     }
 
