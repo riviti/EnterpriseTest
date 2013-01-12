@@ -7,10 +7,10 @@
     <inherits name='com.google.gwt.editor.Editor'/>
 
     <!-- Specify the app entry point class. -->
-    <entry-point class='org.riviti.org.EnterpriseTest.GWT.client.RegistrationModule'/>
+    <entry-point class='org.riviti.EnterpriseTest.GWT.client.RegistrationModule'/>
 
     <!-- Specify the app servlets. -->
-    <servlet path='/GWTService' class='org.riviti.org.EnterpriseTest.GWT.server.GWTServiceImpl'/>
+    <servlet path='/GWTService' class='org.riviti.EnterpriseTest.GWT.server.GWTServiceImpl'/>
 
     <set-property name="user.agent" value="gecko1_8"/>
 </module>

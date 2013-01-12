@@ -1,11 +1,11 @@
-package org.riviti.org.EnterpriseTest.GWT.client.ui;
+package org.riviti.EnterpriseTest.GWT.client.ui;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.editor.client.Editor;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
-import org.riviti.org.EnterpriseTest.GWT.client.OrchestraRegistrationDTO;
+import org.riviti.EnterpriseTest.GWT.client.OrchestraRegistrationDTO;
 
 
 public class OrchestraRegistrationEditor extends Composite implements Editor<OrchestraRegistrationDTO> {

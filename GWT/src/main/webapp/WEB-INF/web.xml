@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>org.riviti.org.EnterpriseTest.GWT.GWT GWTService</servlet-name>
-        <servlet-class>org.riviti.org.EnterpriseTest.GWT.server.GWTServiceImpl</servlet-class>
+        <servlet-class>org.riviti.EnterpriseTest.GWT.server.GWTServiceImpl</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>org.riviti.org.EnterpriseTest.GWT.GWT GWTService</servlet-name>

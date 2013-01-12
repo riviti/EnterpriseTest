@@ -1,11 +1,11 @@
-package org.riviti.org.EnterpriseTest.GWT.server;
+package org.riviti.EnterpriseTest.GWT.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import org.riviti.EnterpriseTest.Common.Mapper;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistration;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistrationHandler;
-import org.riviti.org.EnterpriseTest.GWT.client.GWTService;
-import org.riviti.org.EnterpriseTest.GWT.client.OrchestraRegistrationDTO;
+import org.riviti.EnterpriseTest.GWT.client.GWTService;
+import org.riviti.EnterpriseTest.GWT.client.OrchestraRegistrationDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

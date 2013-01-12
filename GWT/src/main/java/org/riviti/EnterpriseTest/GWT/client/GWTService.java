@@ -1,4 +1,4 @@
-package org.riviti.org.EnterpriseTest.GWT.client;
+package org.riviti.EnterpriseTest.GWT.client;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;

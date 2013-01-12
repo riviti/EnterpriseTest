@@ -1,4 +1,4 @@
-package org.riviti.org.EnterpriseTest.GWT.client;
+package org.riviti.EnterpriseTest.GWT.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -8,7 +8,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
-import org.riviti.org.EnterpriseTest.GWT.client.ui.OrchestraRegistrationEditor;
+import org.riviti.EnterpriseTest.GWT.client.ui.OrchestraRegistrationEditor;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>
