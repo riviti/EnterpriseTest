@@ -1,6 +1,7 @@
 package org.riviti.org.EnterpriseTest.GWT.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import org.riviti.EnterpriseTest.Common.Mapper;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistration;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistrationHandler;
 import org.riviti.org.EnterpriseTest.GWT.client.GWTService;
@@ -49,18 +50,7 @@ public class GWTServiceImpl extends RemoteServiceServlet implements GWTService {
 
         logger.info("Adding registration {}", dto);
 
-        OrchestraRegistration registration = new OrchestraRegistration();
-        registration.setId(dto.getId());
-        registration.setFullName(dto.getFullName());
-        registration.setShortName(dto.getShortName());
-        registration.setShortNameUsageAllowed(dto.isShortNameUsageAllowed());
-        registration.setBestOrchestraMemory(dto.getBestOrchestraMemory());
-        registration.setConcertRitualDescription(dto.getConcertRitualDescription());
-        registration.setLookingForwardToDescription(dto.getLookingForwardToDescription());
-        registration.setSofVisitationCount(dto.getSofVisitationCount());
-        registration.setThreeDescriptiveWords(dto.getThreeDescriptiveWords());
-        registration.setFavouriteMusicDescription(dto.getFavouriteMusicDescription());
-
+        OrchestraRegistration registration = Mapper.getInstance().map(dto, OrchestraRegistration.class);
         orchestraRegistrationHandler.createRegistration(registration);
     }
 }
