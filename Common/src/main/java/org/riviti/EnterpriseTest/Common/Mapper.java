@@ -7,7 +7,7 @@ import org.modelmapper.ModelMapper;
  *
  * @see ModelMapper
  */
-public class Mapper {
+public final class Mapper {
     private static final ModelMapper instance = new ModelMapper();
 
     /**

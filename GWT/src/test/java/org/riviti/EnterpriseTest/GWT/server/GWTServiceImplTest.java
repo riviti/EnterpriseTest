@@ -4,7 +4,6 @@ import org.mockito.ArgumentCaptor;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistration;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistrationHandler;
 import org.riviti.EnterpriseTest.GWT.client.OrchestraRegistrationDTO;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,11 +24,6 @@ public class GWTServiceImplTest {
         service = new GWTServiceImpl();
         registrationHandlerMock = mock(OrchestraRegistrationHandler.class);
         service.setOrchestraRegistrationHandler(registrationHandlerMock);
-    }
-
-    @AfterMethod
-    public void tearDown() throws Exception {
-
     }
 
     @Test
