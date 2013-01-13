@@ -6,7 +6,7 @@ import java.util.List;
 @Remote
 public interface OrchestraRegistrationHandler {
 
-    List<OrchestraRegistration> getMessages();
+    List<OrchestraRegistration> getRegistrations();
 
     void createRegistration(OrchestraRegistration registration);
 }

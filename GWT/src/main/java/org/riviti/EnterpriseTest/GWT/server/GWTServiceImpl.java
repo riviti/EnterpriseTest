@@ -1,6 +1,7 @@
 package org.riviti.EnterpriseTest.GWT.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import org.modelmapper.ModelMapper;
 import org.riviti.EnterpriseTest.Common.Mapper;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistration;
 import org.riviti.EnterpriseTest.Common.OrchestraRegistrationHandler;
@@ -25,21 +26,12 @@ public class GWTServiceImpl extends RemoteServiceServlet implements GWTService {
     }
 
     @Override
-    public List<OrchestraRegistrationDTO> getMessages() {
-        List<OrchestraRegistration> orchestraRegistrations = orchestraRegistrationHandler.getMessages();
+    public List<OrchestraRegistrationDTO> getRegistrations() {
+        List<OrchestraRegistration> orchestraRegistrations = orchestraRegistrationHandler.getRegistrations();
         List<OrchestraRegistrationDTO> retval = new ArrayList<OrchestraRegistrationDTO>();
+        ModelMapper mapper = Mapper.getInstance();
         for (OrchestraRegistration orchestraRegistration : orchestraRegistrations) {
-            OrchestraRegistrationDTO dto = new OrchestraRegistrationDTO();
-            dto.setId(orchestraRegistration.getId());
-            dto.setFullName(orchestraRegistration.getFullName());
-            dto.setShortName(orchestraRegistration.getShortName());
-            dto.setShortNameUsageAllowed(orchestraRegistration.isShortNameUsageAllowed());
-            dto.setBestOrchestraMemory(orchestraRegistration.getBestOrchestraMemory());
-            dto.setConcertRitualDescription(orchestraRegistration.getConcertRitualDescription());
-            dto.setLookingForwardToDescription(orchestraRegistration.getLookingForwardToDescription());
-            dto.setSofVisitationCount(orchestraRegistration.getSofVisitationCount());
-            dto.setThreeDescriptiveWords(orchestraRegistration.getThreeDescriptiveWords());
-            dto.setFavouriteMusicDescription(orchestraRegistration.getFavouriteMusicDescription());
+            OrchestraRegistrationDTO dto = mapper.map(orchestraRegistration, OrchestraRegistrationDTO.class);
             retval.add(dto);
         }
         return retval;

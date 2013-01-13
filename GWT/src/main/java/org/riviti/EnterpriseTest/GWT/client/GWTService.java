@@ -9,7 +9,7 @@ import java.util.List;
 @RemoteServiceRelativePath("GWTService")
 public interface GWTService extends RemoteService {
 
-    List<OrchestraRegistrationDTO> getMessages();
+    List<OrchestraRegistrationDTO> getRegistrations();
 
     void saveRegistration(OrchestraRegistrationDTO registration);
 

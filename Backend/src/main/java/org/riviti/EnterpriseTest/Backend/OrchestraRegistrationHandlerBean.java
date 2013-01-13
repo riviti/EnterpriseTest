@@ -19,7 +19,7 @@ public class OrchestraRegistrationHandlerBean implements OrchestraRegistrationHa
     private EntityManager entityManager;
 
     @Override
-    public List<OrchestraRegistration> getMessages() {
+    public List<OrchestraRegistration> getRegistrations() {
         TypedQuery<OrchestraRegistration> query = entityManager.createQuery("select m from OrchestraRegistration m", OrchestraRegistration.class);
         return query.getResultList();
     }
