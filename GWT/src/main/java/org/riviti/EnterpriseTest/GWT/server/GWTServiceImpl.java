@@ -28,7 +28,7 @@ public class GWTServiceImpl extends RemoteServiceServlet implements GWTService {
     @Override
     public List<OrchestraRegistrationDTO> getRegistrations() {
         List<OrchestraRegistration> orchestraRegistrations = orchestraRegistrationHandler.getRegistrations();
-        List<OrchestraRegistrationDTO> retval = new ArrayList<OrchestraRegistrationDTO>();
+        List<OrchestraRegistrationDTO> retval = new ArrayList<>();
         ModelMapper mapper = Mapper.getInstance();
         for (OrchestraRegistration orchestraRegistration : orchestraRegistrations) {
             OrchestraRegistrationDTO dto = mapper.map(orchestraRegistration, OrchestraRegistrationDTO.class);
