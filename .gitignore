@@ -24,3 +24,10 @@ target/
 .idea/
 *.iml
 out/
+
+# Eclipse
+.classpath
+.project
+.gwt
+.settings
+
