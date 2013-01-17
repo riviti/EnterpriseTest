@@ -1,3 +1,12 @@
 Manifest-Version: 1.0
-Class-Path: Common-1.0-SNAPSHOT.jar slf4j-api-1.6.6.jar logback-core-1.0.7.jar logback-classic-1.0.7.jar
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: simon
+Build-Jdk: 1.7.0_09-icedtea
+Class-Path: org.eclipse.persistence.jpa-2.4.0.jar javax.persistence-2.
+ 0.4.v201112161009.jar org.eclipse.persistence.asm-3.3.1.v201206041142
+ .jar org.eclipse.persistence.antlr-3.2.0.v201206041011.jar org.eclips
+ e.persistence.jpa.jpql-2.4.0.jar org.eclipse.persistence.core-2.4.0.j
+ ar Common-1.0-SNAPSHOT.jar modelmapper-0.5.4.jar logback-classic-1.0.
+ 7.jar logback-core-1.0.7.jar slf4j-api-1.6.6.jar
 
